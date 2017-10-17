@@ -1,4 +1,4 @@
-# Projet Docket Tomcat & Postgresql
+# Projet Docker Tomcat & Postgresql
 
 # Le projet était de créer un serveur Tomcat et de le lier à une base de données Postgresql.
 
