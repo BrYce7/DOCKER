@@ -2,7 +2,7 @@
 
 # Le projet était de créer un serveur Tomcat et de le lier à une base de données Postgresql.
 
-Pour cela nous avons crée2 containers, chacun montés sur 2 images en Dockerfile.
+Pour cela nous avons crée 2 containers, chacun montés sur 2 images en Dockerfile.
 
 Le container de Tomcat est monté sur le Dockerfile du dossier warrepo, on a utilisé l'image officielle tomcat:8-jre8 et on copie le 
 dossier donné par notre professeur dbproject.war (qui contient le contenu du site) dans le dossier /usr/local/tomcat/webapps/ pour le
