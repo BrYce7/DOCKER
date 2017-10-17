@@ -12,9 +12,9 @@ Une fois les 2 Dockerfile crées on va build les images dessus grâce à la comm
 
 Une fois les 2 images créees ont peut run les 2 containers grace aux commandes:
 
-docker run -d --name db nomDeMonImagePostgresql
+docker run -d --name db -v /bddData:/var/lib/postgresql/data nomDeMonImagePostgresql
 
-docker run -d --name MyApp -p 8888:8080 -v /bddData:/var/lib/postgresql/data --link db nomDeMonImageTomcat
+docker run -d --name MyApp -p 8888:8080 --link db nomDeMonImageTomcat
 
 le -d permet de lancer le container en deamon (en tache de fond), on lui donne un nom grâce à --name, l'option -p permet de lui donner un port (ici le port 8888), l'option -v quant-à elle permet de lié un dossier en local avec un dossier du container pour la persistence de données. Enfin on utilise --link db pour lier le container tomcat au container postgresql. On lui indique ensuite de nom de l'image préalablement crée pour monter le container dessus.
 
