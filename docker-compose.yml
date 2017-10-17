@@ -1,0 +1,19 @@
+version: '3'
+services:
+ myfinalappimg:
+  build: ./warrepo
+  ports:
+   - "8887:8080"
+  container_name: MyFinalApp          
+  depends_on:
+   - db
+ db:
+  build: ./postgresql
+  ports:
+   - "5432:5432"
+  volumes:
+   - db_data:/var/lib/postgresql/data
+  container_name: db
+
+volumes:
+        db_data:
